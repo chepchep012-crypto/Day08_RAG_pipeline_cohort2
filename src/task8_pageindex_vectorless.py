@@ -18,6 +18,7 @@ Hướng dẫn:
 """
 
 import os
+import time
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -25,9 +26,23 @@ load_dotenv()
 
 PAGEINDEX_API_KEY = os.getenv("PAGEINDEX_API_KEY", "")
 STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
+# PageIndex SDK xử lý trực tiếp file PDF gốc (OCR + sinh cây cấu trúc tài liệu),
+# nên ta upload PDF gốc từ data/landing/ thay vì bản markdown đã chuẩn hoá.
+LANDING_DIR = Path(__file__).parent.parent / "data" / "landing"
+
+_client = None
+_doc_ids: list[str] = []
 
 
-def upload_documents():
+def _get_client():
+    global _client
+    if _client is None:
+        from pageindex import PageIndexClient
+        _client = PageIndexClient(api_key=PAGEINDEX_API_KEY)
+    return _client
+
+
+def upload_documents() -> list[str]:
     """
     Upload toàn bộ markdown documents lên PageIndex.
     """
@@ -46,7 +61,24 @@ def upload_documents():
     #         metadata={"filename": md_file.name, "type": md_file.parent.name}
     #     )
     #     print(f"  ✓ Uploaded: {md_file.name}")
-    raise NotImplementedError("Implement upload_documents")
+    client = _get_client()
+
+    doc_ids = []
+    for pdf_file in sorted(LANDING_DIR.rglob("*.pdf")):
+        result = client.submit_document(str(pdf_file))
+        doc_id = result["doc_id"]
+        doc_ids.append(doc_id)
+        print(f"  ✓ Uploaded: {pdf_file.name} → doc_id={doc_id}")
+
+    # Upload bất đồng bộ (OCR + sinh cây cấu trúc) — chờ tới khi sẵn sàng cho retrieval
+    for doc_id in doc_ids:
+        while not client.is_retrieval_ready(doc_id):
+            time.sleep(5)
+        print(f"  ✓ Ready for retrieval: {doc_id}")
+
+    global _doc_ids
+    _doc_ids = doc_ids
+    return doc_ids
 
 
 def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
@@ -82,7 +114,39 @@ def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
     #     }
     #     for r in results
     # ]
-    raise NotImplementedError("Implement pageindex_search")
+    client = _get_client()
+    if not _doc_ids:
+        upload_documents()
+
+    results = []
+    for doc_id in _doc_ids:
+        submitted = client.submit_query(doc_id=doc_id, query=query)
+        retrieval_id = submitted["retrieval_id"]
+
+        # Retrieval chạy bất đồng bộ (LLM duyệt cây cấu trúc tài liệu) — poll tới khi xong
+        while True:
+            retrieval = client.get_retrieval(retrieval_id)
+            if retrieval.get("status") in ("completed", "done", "ready"):
+                break
+            time.sleep(2)
+
+        nodes = retrieval.get("results") or retrieval.get("nodes") or []
+        for rank, node in enumerate(nodes, start=1):
+            results.append({
+                "content": node.get("content") or node.get("text", ""),
+                # PageIndex là vectorless (không có similarity score) —
+                # dùng relevance_score nếu API trả về, nếu không thì suy ra từ thứ hạng
+                "score": node.get("relevance_score", 1.0 / rank),
+                "metadata": {
+                    "doc_id": doc_id,
+                    "node_id": node.get("node_id"),
+                    "title": node.get("title"),
+                },
+                "source": "pageindex"
+            })
+
+    results.sort(key=lambda r: r["score"], reverse=True)
+    return results[:top_k]
 
 
 if __name__ == "__main__":

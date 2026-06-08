@@ -11,6 +11,20 @@ Nếu dùng MMR hoặc RRF, đảm bảo hiểu và giải thích được cơ c
 
 from typing import Optional
 
+# Cross-encoder model — multilingual (mMARCO, hỗ trợ tiếng Việt), nhẹ (~470MB),
+# chạy local nên không cần JINA_API_KEY. Load lazy (chỉ 1 lần) để tránh tốn
+# thời gian/bộ nhớ khi module chỉ được import mà không dùng tới reranking.
+CROSS_ENCODER_MODEL = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+_cross_encoder = None
+
+
+def _get_cross_encoder():
+    global _cross_encoder
+    if _cross_encoder is None:
+        from sentence_transformers import CrossEncoder
+        _cross_encoder = CrossEncoder(CROSS_ENCODER_MODEL, max_length=512)
+    return _cross_encoder
+
 
 def rerank_cross_encoder(
     query: str, candidates: list[dict], top_k: int = 5
@@ -49,7 +63,19 @@ def rerank_cross_encoder(
     # Option B: Local model (Qwen3-Reranker)
     # from transformers import AutoModelForSequenceClassification, AutoTokenizer
     # ...
-    raise NotImplementedError("Implement rerank_cross_encoder")
+    if not candidates:
+        return []
+
+    model = _get_cross_encoder()
+    pairs = [(query, c["content"]) for c in candidates]
+    scores = model.predict(pairs)
+
+    reranked = [
+        {**candidate, "score": float(score)}
+        for candidate, score in zip(candidates, scores)
+    ]
+    reranked.sort(key=lambda c: c["score"], reverse=True)
+    return reranked[:top_k]
 
 
 def rerank_mmr(
@@ -102,7 +128,38 @@ def rerank_mmr(
     #     remaining.remove(best_idx)
     #
     # return [candidates[i] for i in selected]
-    raise NotImplementedError("Implement rerank_mmr")
+    import numpy as np
+
+    def cosine_sim(a, b):
+        a, b = np.array(a), np.array(b)
+        denom = np.linalg.norm(a) * np.linalg.norm(b)
+        return float(np.dot(a, b) / denom) if denom else 0.0
+
+    selected: list[int] = []
+    remaining = list(range(len(candidates)))
+
+    for _ in range(min(top_k, len(candidates))):
+        best_idx = None
+        best_score = float("-inf")
+
+        for idx in remaining:
+            relevance = cosine_sim(query_embedding, candidates[idx]["embedding"])
+
+            max_sim_to_selected = 0.0
+            for sel_idx in selected:
+                sim = cosine_sim(candidates[idx]["embedding"], candidates[sel_idx]["embedding"])
+                max_sim_to_selected = max(max_sim_to_selected, sim)
+
+            mmr_score = lambda_param * relevance - (1 - lambda_param) * max_sim_to_selected
+
+            if mmr_score > best_score:
+                best_score = mmr_score
+                best_idx = idx
+
+        selected.append(best_idx)
+        remaining.remove(best_idx)
+
+    return [{**candidates[i], "score": cosine_sim(query_embedding, candidates[i]["embedding"])} for i in selected]
 
 
 def rerank_rrf(
@@ -142,7 +199,24 @@ def rerank_rrf(
     #     results.append(item)
     #
     # return results
-    raise NotImplementedError("Implement rerank_rrf")
+    rrf_scores: dict[str, float] = {}
+    content_map: dict[str, dict] = {}
+
+    for ranked_list in ranked_lists:
+        for rank, item in enumerate(ranked_list, 1):
+            key = item["content"]
+            rrf_scores[key] = rrf_scores.get(key, 0) + 1 / (k + rank)
+            content_map[key] = item
+
+    sorted_items = sorted(rrf_scores.items(), key=lambda x: x[1], reverse=True)
+
+    results = []
+    for content, score in sorted_items[:top_k]:
+        item = content_map[content].copy()
+        item["score"] = score
+        results.append(item)
+
+    return results
 
 
 # =============================================================================

@@ -9,6 +9,30 @@ Yêu cầu:
     - Phải tương thích với embedding model và vector store ở Task 4
 """
 
+from src.task4_chunking_indexing import (
+    CHROMA_DIR, COLLECTION_NAME, EMBEDDING_MODEL,
+)
+
+_model = None
+_collection = None
+
+
+def _get_model():
+    global _model
+    if _model is None:
+        from sentence_transformers import SentenceTransformer
+        _model = SentenceTransformer(EMBEDDING_MODEL)
+    return _model
+
+
+def _get_collection():
+    global _collection
+    if _collection is None:
+        import chromadb
+        client = chromadb.PersistentClient(path=str(CHROMA_DIR))
+        _collection = client.get_collection(COLLECTION_NAME)
+    return _collection
+
 
 def semantic_search(query: str, top_k: int = 10) -> list[dict]:
     """
@@ -56,7 +80,27 @@ def semantic_search(query: str, top_k: int = 10) -> list[dict]:
     #     }
     #     for obj in results.objects
     # ]
-    raise NotImplementedError("Implement semantic_search")
+    model = _get_model()
+    query_embedding = model.encode(query).tolist()
+
+    collection = _get_collection()
+    results = collection.query(
+        query_embeddings=[query_embedding],
+        n_results=top_k,
+        include=["documents", "distances", "metadatas"],
+    )
+
+    output = []
+    for content, distance, metadata in zip(
+        results["documents"][0], results["distances"][0], results["metadatas"][0]
+    ):
+        output.append({
+            "content": content,
+            "score": 1 - distance,  # cosine distance → similarity
+            "metadata": dict(metadata),
+        })
+    output.sort(key=lambda r: r["score"], reverse=True)
+    return output
 
 
 if __name__ == "__main__":

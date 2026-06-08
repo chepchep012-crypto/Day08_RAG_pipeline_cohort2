@@ -22,6 +22,24 @@ LANDING_DIR = Path(__file__).parent.parent / "data" / "landing"
 OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
 
 
+def _convert_legacy_doc_to_docx(doc_path: Path, docx_path: Path):
+    """
+    MarkItDown không hỗ trợ định dạng .doc nhị phân cũ (OLE2 compound file),
+    chỉ hỗ trợ .docx. Dùng MS Word qua COM automation (pywin32) để save-as .docx
+    trước khi convert.
+    """
+    import win32com.client
+
+    word = win32com.client.Dispatch("Word.Application")
+    word.Visible = False
+    try:
+        doc = word.Documents.Open(str(doc_path))
+        doc.SaveAs2(str(docx_path), FileFormat=16)  # wdFormatXMLDocument (.docx)
+        doc.Close()
+    finally:
+        word.Quit()
+
+
 def convert_legal_docs():
     """Convert PDF/DOCX files trong data/landing/legal/ sang markdown."""
     legal_dir = LANDING_DIR / "legal"
@@ -34,11 +52,21 @@ def convert_legal_docs():
         if filepath.suffix.lower() in (".pdf", ".docx", ".doc"):
             print(f"Converting: {filepath.name}")
             # TODO: Convert và lưu file
-            # result = md.convert(str(filepath))
-            # output_path = output_dir / f"{filepath.stem}.md"
-            # output_path.write_text(result.text_content, encoding="utf-8")
-            # print(f"  ✓ Saved: {output_path}")
-            raise NotImplementedError("Implement convert_legal_docs")
+            source = filepath
+            tmp_docx = None
+            if filepath.suffix.lower() == ".doc":
+                tmp_docx = output_dir / f"~{filepath.stem}.docx"
+                _convert_legacy_doc_to_docx(filepath, tmp_docx)
+                source = tmp_docx
+
+            try:
+                result = md.convert(str(source))
+                output_path = output_dir / f"{filepath.stem}.md"
+                output_path.write_text(result.text_content, encoding="utf-8")
+                print(f"  ✓ Saved: {output_path}")
+            finally:
+                if tmp_docx is not None:
+                    tmp_docx.unlink(missing_ok=True)
 
 
 def convert_news_articles():
@@ -51,18 +79,17 @@ def convert_news_articles():
         if filepath.suffix.lower() == ".json":
             print(f"Converting: {filepath.name}")
             # TODO: Đọc JSON, extract content_markdown, lưu thành .md
-            # data = json.loads(filepath.read_text(encoding="utf-8"))
-            # output_path = output_dir / f"{filepath.stem}.md"
-            #
-            # # Thêm metadata header
-            # header = f"# {data.get('title', 'Unknown')}\n\n"
-            # header += f"**Source:** {data.get('url', 'N/A')}\n"
-            # header += f"**Crawled:** {data.get('date_crawled', 'N/A')}\n\n---\n\n"
-            #
-            # content = header + data.get("content_markdown", "")
-            # output_path.write_text(content, encoding="utf-8")
-            # print(f"  ✓ Saved: {output_path}")
-            raise NotImplementedError("Implement convert_news_articles")
+            data = json.loads(filepath.read_text(encoding="utf-8"))
+            output_path = output_dir / f"{filepath.stem}.md"
+
+            # Thêm metadata header
+            header = f"# {data.get('title', 'Unknown')}\n\n"
+            header += f"**Source:** {data.get('url', 'N/A')}\n"
+            header += f"**Crawled:** {data.get('date_crawled', 'N/A')}\n\n---\n\n"
+
+            content = header + data.get("content_markdown", "")
+            output_path.write_text(content, encoding="utf-8")
+            print(f"  ✓ Saved: {output_path}")
 
 
 def convert_all():
