@@ -1,17 +1,82 @@
 [
   {
-    "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý theo Điều 249 Bộ luật Hình sự?",
-    "expected_answer": "Phạt tù từ 1 đến 5 năm đối với trường hợp tàng trữ từ 1g đến dưới 5g heroin hoặc cocaine, hoặc chất ma tuý khác với khối lượng tương đương.",
-    "expected_context": "Bộ luật Hình sự 2015, Điều 249"
+    "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý thuộc Danh mục I là bao nhiêu năm tù?",
+    "expected_answer": "Từ 02 năm đến 07 năm tù theo khoản 1 Điều 248 Bộ luật Hình sự.",
+    "expected_context": "Điều 248 Bộ luật Hình sự"
+  },
+  {
+    "question": "Tàng trữ từ 5 gram đến dưới 100 gram chất ma tuý bị phạt bao nhiêu năm?",
+    "expected_answer": "Phạt tù từ 07 năm đến 15 năm theo khoản 2 Điều 248.",
+    "expected_context": "Điều 248 tàng trữ 5 gram"
+  },
+  {
+    "question": "Hình phạt cho tội mua bán trái phép chất ma tuý Danh mục I?",
+    "expected_answer": "Phạt tù từ 15 năm đến 20 năm, tù chung thân hoặc tử hình theo Điều 249.",
+    "expected_context": "Điều 249 mua bán ma túy"
+  },
+  {
+    "question": "Tội vận chuyển trái phép chất ma túy bị phạt như thế nào?",
+    "expected_answer": "Phạt tù từ 07 năm đến 15 năm theo Điều 250 Bộ luật Hình sự.",
+    "expected_context": "Điều 250 vận chuyển"
+  },
+  {
+    "question": "Hình phạt tội tổ chức cầm đầu đường dây mua bán ma túy?",
+    "expected_answer": "Phạt tù từ 20 năm đến tù chung thân hoặc tử hình theo Điều 251.",
+    "expected_context": "Điều 251 tổ chức đường dây"
+  },
+  {
+    "question": "Người sử dụng trái phép chất ma túy bị xử lý thế nào?",
+    "expected_answer": "Bị xử lý hành chính hoặc đưa vào cơ sở cai nghiện theo Điều 252.",
+    "expected_context": "Điều 252 sử dụng ma túy"
+  },
+  {
+    "question": "Hình phạt tội sản xuất trái phép chất ma túy Danh mục I?",
+    "expected_answer": "Phạt tù từ 15 năm đến 20 năm, tù chung thân hoặc tử hình theo Điều 247.",
+    "expected_context": "Điều 247 sản xuất ma túy"
   },
   {
     "question": "Luật Phòng chống ma tuý 2021 quy định những hình thức cai nghiện nào?",
-    "expected_answer": "Cai nghiện tự nguyện tại gia đình, cai nghiện tự nguyện tại cộng đồng, cai nghiện tự nguyện tại cơ sở cai nghiện, và cai nghiện bắt buộc tại cơ sở cai nghiện.",
-    "expected_context": "Luật Phòng chống ma tuý 2021, Chương V"
+    "expected_answer": "Cai nghiện tự nguyện tại cộng đồng, tại gia đình, và cai nghiện bắt buộc tại cơ sở cai nghiện.",
+    "expected_context": "Điều 40 cai nghiện ma túy"
   },
   {
-    "question": "Danh mục các chất ma tuý thuộc nhóm I theo quy định pháp luật Việt Nam gồm những chất nào?",
-    "expected_answer": "Nhóm I gồm các chất ma tuý tuyệt đối cấm sử dụng trong y học và đời sống, bao gồm heroin, cocaine, methamphetamine, MDMA (ecstasy), cannabis (cần sa), và các chất tương tự.",
-    "expected_context": "Nghị định 57/2022/NĐ-CP, Phụ lục I"
+    "question": "Ai là đối tượng cai nghiện bắt buộc theo Luật Phòng chống ma tuý?",
+    "expected_answer": "Người từ 12 đến dưới 18 tuổi sử dụng trái phép; người từ 18 tuổi sử dụng lần thứ hai trở lên.",
+    "expected_context": "Điều 41 cai nghiện bắt buộc"
+  },
+  {
+    "question": "Nghị định 105/2021 hướng dẫn thi hành luật nào?",
+    "expected_answer": "Hướng dẫn thi hành Luật Phòng, chống ma túy về phòng ngừa, phát hiện, xử lý vi phạm và cai nghiện.",
+    "expected_context": "Nghị định 105/2021"
+  },
+  {
+    "question": "Ca sĩ Chi Dân bị bắt vì tội gì?",
+    "expected_answer": "Bị bắt về tội Tổ chức sử dụng trái phép chất ma túy.",
+    "expected_context": "Chi Dân ma túy"
+  },
+  {
+    "question": "Người mẫu Andrea Aybar (An Tây) bị khởi tố vì những hành vi nào?",
+    "expected_answer": "Tàng trữ trái phép chất ma túy và Tổ chức sử dụng trái phép chất ma túy.",
+    "expected_context": "Andrea Aybar An Tây"
+  },
+  {
+    "question": "Ca sĩ Long Nhật bị bắt vì hành vi gì liên quan ma túy?",
+    "expected_answer": "Tổ chức sử dụng trái phép chất ma túy, sử dụng ma túy đá tại nhà.",
+    "expected_context": "Long Nhật ma túy"
+  },
+  {
+    "question": "Rapper L.K. bị tuyên án bao nhiêu năm tù?",
+    "expected_answer": "4 năm tù về tội tàng trữ trái phép chất ma túy.",
+    "expected_context": "rapper L.K. 4 năm tù"
+  },
+  {
+    "question": "DJ T.M. bị bắt ở đâu và tang vật gồm gì?",
+    "expected_answer": "Bị bắt tại lễ hội âm nhạc Bình Dương, thu giữ 10 viên thuốc lắc và bột trắng nghi ma túy.",
+    "expected_context": "DJ T.M. lễ hội âm nhạc"
+  },
+  {
+    "question": "Người mẫu P.T.H. bị đưa vào cơ sở cai nghiện vì lý do gì?",
+    "expected_answer": "Sử dụng ma túy lần thứ ba, bị đưa vào cơ sở cai nghiện bắt buộc 12-24 tháng.",
+    "expected_context": "người mẫu cai nghiện bắt buộc"
   }
 ]

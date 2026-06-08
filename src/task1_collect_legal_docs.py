@@ -45,3 +45,10 @@ def setup_directory():
 
 if __name__ == "__main__":
     setup_directory()
+    # Chạy scripts/setup_data.py để tải/tạo văn bản mẫu nếu chưa có file
+    import subprocess
+    import sys
+
+    script = Path(__file__).parent.parent / "scripts" / "setup_data.py"
+    if script.exists():
+        subprocess.run([sys.executable, str(script)], check=False)
