@@ -1,0 +1,123 @@
+# Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy - Báo VnExpress Giải trí
+
+**Source:** https://vnexpress.net/su-nghiep-long-nhat-truoc-khi-bi-bat-vi-lien-quan-ma-tuy-5076081.html
+**Crawled:** 2026-06-10T01:45:56.762939
+
+---
+
+[![VnExpress - Bao tieng Viet nhieu nguoi xem nhat](https://s1.vnecdn.net/vnexpress/restruct/i/v9838/v2_2019/pc/graphics/logo_tagline.svg)](/ "Báo VnExpress - Báo tiếng Việt nhiều người xem nhất")
+
+[Thứ tư, 10/6/2026](/lich-van-nien "Lịch âm")
+
+[Mới nhất](/tin-tuc-24h "Mới nhất")
+
+Tin theo khu vực
+
+* [Hà Nội](/chu-de/thanh-pho-ha-noi-2056 "Hà Nội")
+* [TP HCM](/chu-de/thanh-pho-ho-chi-minh-2091 "TP HCM")
+
+[International](https://e.vnexpress.net/ "VnExpress International")
+
+[![](https://s1.vnecdn.net/vnexpress/restruct/c/v3980/v2_2019/pc/images/graphics/menu-myvne.svg)](/myvne)
+
+* [Mới nhất](/tin-tuc-24h "Mới nhất")
+* [VnE-GO](/vne-go "VnE-GO")
+* [Thời sự](/thoi-su "Thời sự")
+* [Thế giới](/the-gioi "Thế giới")
+* [Kinh doanh](/kinh-doanh "Kinh doanh")
+* [Khoa học công nghệ](/khoa-hoc-cong-nghe "Khoa học công nghệ")
+* [Góc nhìn](/goc-nhin "Góc nhìn")
+* [Bất động sản](/bat-dong-san "Bất động sản")
+* [Sức khỏe](/suc-khoe "Sức khỏe")
+* [Thể thao](/the-thao "Thể thao")
+* [Giải trí](/giai-tri "Giải trí")
+* [Pháp luật](/phap-luat "Pháp luật")
+* [Giáo dục](/giao-duc "Giáo dục")
+* [Đời sống](/doi-song "Đời sống")
+* [Xe](/oto-xe-may "Xe")
+* [Du lịch](/du-lich "Du lịch")
+* [Ý kiến](/y-kien "Ý kiến")
+* [Tâm sự](/tam-su "Tâm sự")
+* [Thư giãn](/thu-gian "Thư giãn")
+* Tất cả
+
+* [Trở lại Giải trí](/giai-tri)
+
+* [Giải trí](/giai-tri "Giải trí")
+* [Nhạc](/giai-tri/nhac "Nhạc")
+* [Làng nhạc](/giai-tri/nhac/lang-nhac "Làng nhạc")
+
+Thứ tư, 20/5/2026, 16:07 (GMT+7)
+
+# Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy
+
+## Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy
+
+Long Nhật là giọng hát trữ tình nổi tiếng thập niên 1990, sau đó xuất hiện ở nhiều game show trước khi bị bắt vì tổ chức sử dụng trái phép chất ma túy.
+
+Ngày 20/5, Công an TP HCM cho biết Đinh Long Nhật (tức ca sĩ Long Nhật, 58 tuổi) bị Phòng Cảnh sát điều tra tội phạm về mua túy (PC04) bắt về hành vi *Tổ chức sử dụng trái phép chất ma túy*. Ca sĩ khai tổ chức sử dụng ma túy đá cùng người giúp việc và một người quen đến chơi nhà, thừa nhận chuyển tiền nhờ người mua hàng.
+
+Trước khi bị bắt, nhiều năm qua, ca sĩ Long Nhật có cuộc sống kín tiếng. Lần gần nhất ca sĩ xuất hiện trước đồng nghiệp, công chúng là ở lễ kỷ niệm 73 năm Ngày điện ảnh Việt Nam giữa tháng 3 ở Hà Nội.
+
+Những năm gần đây, Long Nhật duy trì hoạt động âm nhạc, song không có sản phẩm nào gây chú ý. Năm 2024, dịp 35 năm theo đuổi ca hát, Long Nhật tổ chức liveshow *Người con xứ Huế* - đêm nhạc đầu tư nhất sự nghiệp. Khi đó, ca sĩ cho biết không bán vé để tri ân người nghe ở Huế - quê hương anh. Anh tự chọn bài hát, trang phục, lên ý tưởng dàn dựng vì "mong muốn mang đến những điều thú vị nhất dành tặng khán giả". Ca sĩ mời nhiều đồng nghiệp hát chung, như nghệ sĩ Thu Hiền, Vân Khánh, Ngọc Đợi, ca sĩ Ngọc Ánh, ôn lại một chặng đường ca hát.
+
+Thỉnh thoảng, Long Nhật góp mặt trong các đêm nhạc trữ tình ở các địa phương, hoặc làm giám khảo một số cuộc thi bolero quy mô nhỏ. Trong một talkshow năm 2025, ca sĩ cho biết hạn chế xuất hiện trong showbiz vì "sức khỏe không đảm bảo", chỉ nhận lời hợp tác với chương trình phù hợp.
+
+![Long Nhật hát "Ở hai đầu nỗi nhớ" tại chương trình "Tuyệt đỉnh song ca - Cặp đôi vàng nhí" năm 2019](https://iv1.vnecdn.net/giaitri/images/web/2026/05/20/long-nhat-hat-o-hai-dau-noi-nho-tai-chuong-trinh-tuyet-dinh--1779264548.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=MDTZSITDctrIXwdzMeDMSw)
+
+[](https://d1.vnecdn.net/giaitri/video/video/web/mp4/,240p,360p,480p,,/2026/05/20/long-nhat-hat-o-hai-dau-noi-nho-tai-chuong-trinh-tuyet-dinh--1779264548/vne/master.m3u8)
+
+Long Nhật hát "Ở hai đầu nỗi nhớ" tại chương trình "Tuyệt đỉnh song ca - Cặp đôi vàng nhí" năm 2019
+
+Long Nhật hát "Ở hai đầu nỗi nhớ" tại chương trình "Tuyệt đỉnh song ca - Cặp đôi vàng nhí" năm 2019. Video: *Ban tổ chức cung cấp*
+
+**Long Nhật từng là cái tên quen thuộc của nhiều khán giả yêu dòng nhạc trữ tình - bolero**. Trên báo *Màn ảnh sân khấu* năm 2002, anh cho biết thời học phổ thông từng ôm mộng trở thành ca sĩ, song bị cha ngăn cản vì muốn con theo nghề sư phạm. Đầu thập niên 1990, Long Nhật quyết định thi tuyển vào đoàn ca nhạc Hải Đăng ở Nha Trang. Dưới sự giúp đỡ của các ca sĩ Ngọc Thúy, Mỹ Hạnh, anh trở thành giọng ca của đơn vị này.
+
+Những năm 1993-1994, Long Nhật dần nổi tiếng qua ca khúc *Mấy nhịp cầu tre* (sáng tác: Hoàng Thi Thơ). Nhạc phẩm là thành công đầu tiên, giúp anh đặt bước quan trọng trên con đường ca hát chuyên nghiệp, khẳng định bản thân với gia đình. Sau khi chuyển từ TP HCM ra Hà Nội hoạt động, anh tiếp tục xuất hiện trong các chương trình biểu diễn trên truyền hình. Ca sĩ ghi dấu qua nhiều ca khúc như *Tóc em đuôi gà* (Thế Hiển), *Về quê ngoại* (Hàn Châu), *Về quê* (Phó Đức Phương), *Xin làm người hát rong* (Trần Long Ẩn).
+
+Năm 1999, Long Nhật được mời thu album đầu tay *Xin làm người hát rong*. Sau đó, một đơn vị khác cũng mời anh thực hiện hai đĩa nhạc *Nỗi niềm* và *Thu vắng*. Dù hát nhiều thể loại, tên tuổi ca sĩ được biết đến nhiều nhất ở dòng trữ tình - quê hương. "Khi đó, các điểm diễn ở miền Bắc, không nơi nào không có bóng dáng tôi", Long Nhật từng nói.
+
+![Ca sĩ Long Nhật trong một chương trình truyền hình. Ảnh: Ban tổ chức cung cấp](data:image/gif;base64...)
+
+Ca sĩ Long Nhật ở tuổi 58. Ảnh: *Ban tổ chức cung cấp*
+
+Đầu thập niên 2000, ca sĩ trở về TP HCM để gây dựng lại sự nghiệp ở đây. Anh tiếp tục ra mắt album *Ngựa ô lang thang*, tuyển tập loạt tình ca mang âm hưởng dân ca Nam Bộ và Huế. Lúc ấy, dù nhạc trẻ lên ngôi với loạt ca khúc gây sốt Làn Sóng Xanh, anh muốn theo đuổi nhạc tình và nhạc quê hương vì cho rằng thể loại này đang dần được yêu thích trở lại.
+
+Nghệ sĩ Bạch Tuyết từng đánh giá Long Nhật có chất giọng ngọt ngào, lối hát mùi mẫn, phù hợp thể loại tân cổ giao duyên. Năm 2015, khi hợp tác với anh trong một phim ca nhạc, bà viết tặng ca sĩ một đoạn lời ca vọng cổ. Trong MV, anh vào vai con trai của một người mẹ (nghệ sĩ Bạch Tuyết đóng), vì bận mưu sinh mà luôn vắng nhà, để mẹ và các em ngóng trông mỗi dịp xuân về.
+
+Ngoài ca hát, Long Nhật thường xuất hiện trong các game show như *Nhanh như chớp, Siêu bất ngờ, Ký ức vui vẻ, Tình khúc giao mùa.* Ca sĩ còn làm khách mời biểu diễn trong các cuộc thi ăn khách, như tiết mục của Thanh Duy ở *Gương mặt thân quen*. Dù vậy, Long Nhật từng gây tranh cãi vì lạm dụng hình thức giả gái, lời thoại [hài dung tục](https://vnexpress.net/bi-mat-dem-chu-nhat-gay-phan-cam-vi-hai-dung-tuc-3447984.html), phản cảm như tiểu phẩm ở show *Bí mật đêm chủ nhật* năm 2016.
+
+Ở mảng phim, ca sĩ từng góp mặt trong một số dự án truyền hình lẫn web drama. Năm 2020, Long Nhật tham gia một vai phụ trong phim cổ trang *Phượng khấu* (đạo diễn Huỳnh Tuấn Anh), đóng cùng các nghệ sĩ gạo cội như Thành Lộc, Hồng Vân, Hồng Đào.
+
+Nhiều người trong nghề cho rằng sự việc Long Nhật và nhiều người nổi tiếng liên tiếp bị bắt vì vướng vào ma túy gần đây là bài học cảnh báo. Nghệ sĩ Ưu tú Hạnh Thúy cho biết chứng kiến nhiều người lụn bại sự nghiệp sau khi sử dụng chất cấm, không ai dám hợp tác.
+
+"Nếu ai đó đang lỡ mắc kẹt trong nó, tôi mong họ đủ can đảm để tìm người giúp đỡ, trước khi mọi thứ đi quá xa. Vì đôi khi, điều mạnh mẽ nhất không phải là chứng minh mình 'chơi được', mà là dám dừng lại", nghệ sĩ Hạnh Thúy nói.
+
+**Tam Kỳ**
+
+[Trở lại Giải tríTrở lại Giải trí](/giai-tri)
+
+[![google](https://s1.vnecdn.net/vnexpress/restruct/i/v391/icons/icon-google.svg)
+Thêm VnExpress trên Google](https://www.google.com/preferences/source?q=vnexpress.net)
+
+Chọn VnExpress làm nguồn **ưu tiên**
+trên *Google Search*. [Xem hướng dẫn.](#google-news-popup)
+
+Copy link thành công
+
+## Chọn VnExpress làm nguồn ưu tiên trên Google Search
+
+* **Bước 1:** Bấm vào nút ‘Thêm VnExpress trên Google’, hoặc truy cập đường dẫn [https://www.google.com/preferences/source? q=vnexpress.net](https://www.google.com/preferences/source?q=vnexpress.net).
+* **Bước 2:** Tại trang web vừa mở, bấm vào ô vuông nằm bên phải VnExpress để chọn làm nguồn tìm kiếm ưu tiên.
+
+Khi ô vuông chuyển thành dấu tích xanh là hoàn thành, bạn đọc có thể đóng trang web trên.
+
+![Các nguồn được ưu tiên](https://s1.vnecdn.net/vnexpress/restruct/i/v9838/graphics/nguonuutien.jpg)
+
+Khi nhìn thấy dấu tích xanh bên cạnh VnExpress là đã hoàn thành.
+
+×
+
+![]()
+
+×
